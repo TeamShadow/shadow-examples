@@ -1,0 +1,6 @@
+# Shadow files
+*.ll
+*.meta
+
+# execs
+**/a.out

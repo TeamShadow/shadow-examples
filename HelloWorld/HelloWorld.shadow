@@ -1,0 +1,10 @@
+// This program prints out "Hello, World!"
+import shadow:io@Console;
+
+class HelloWorld
+{
+    public main( String[] args ) => ()
+    {
+        Console:instance.printLine("Hello, World!");
+    }
+}
