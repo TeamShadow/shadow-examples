@@ -1,0 +1,52 @@
+import shadow:io@Console;
+
+class MultipleReturns
+{
+	public main( String[] args ) => ()
+	{
+	 	Console con = Console:instance;
+	 	
+	 	String temp, evenOdd;
+	 	int num, squared, half, doubled, factorial;
+	 	
+	 //Prompt the user for an int to inspect	
+	 	con.print("\nEnter an Integer: ");
+	 	(temp, ) = con.readLine();
+	 	num = temp.toInt();
+	 	con.printLine();
+
+	 //This is how you structure multiple returns. Place them in the order they get returned from the function	
+	 	(evenOdd, half, doubled, squared, factorial) = numberInfo(num);
+	 	
+	 //Print out the info	
+	 	con.printLine(num # " is an " # evenOdd # " number.");
+	 	con.printLine("Half of " # num # " is: " # half);
+	 	con.printLine(num # " doubled is: " # doubled);
+	 	con.printLine(num # " squared is: " # squared);
+	 	con.printLine(num # "! is: " # factorial # "\n");
+	 	
+	}
+
+	//This is how you declare a function with multiple return types and values 
+	 public numberInfo(int num) => (String, int, int, int, int)
+	 {
+	 	String evenOdd;
+	 	int half, doubled, squared, factorial = num;
+	 
+	 //Get all the info on the number	
+	 	if(num % 2 == 0)
+	 		evenOdd = "even";
+	 	else
+	 		evenOdd = "odd";
+	 		
+	 	half = num / 2;
+	 	doubled = num * 2;
+	 	squared = num * num;
+	 	
+	 	for(int i = num ; i > 0 ; i -= 1)
+	 		factorial *= i;	
+	 	
+	 //Return each value in the order you want. It must match above where you call the function, and the declaration of the function.	
+	 	return(evenOdd, half, doubled, squared, factorial);
+	 }
+}
