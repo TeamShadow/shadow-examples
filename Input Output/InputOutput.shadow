@@ -1,0 +1,36 @@
+import shadow:io@Console;
+
+class InputOutput
+{
+	public main( String[] args ) => ()
+	 {
+	 	Console con = Console:instance;
+	 	
+	 	String name, school, home, temp;
+	 	int age;
+	 	
+	 //prompt the user for basic information	
+	 	con.print("\nWhat's your name? ");
+	 	(name, ) = con.readLine();
+	 	con.printLine();
+	 	
+	 	con.print("How old are you? ");
+	 	(temp, ) = con.readLine();
+	 
+	 //convert string to int to get the age	
+	 	age = temp.toInt();
+	 	con.printLine();
+	 	
+	 	con.print("Where are you from? ");
+	 	(home, ) = con.readLine();
+	 	con.printLine();
+	 	
+	 	con.print("What school do you attend? ");
+	 	(school, ) = con.readLine();
+	 	con.printLine();
+	 	
+	 //print out their info, variable are added with a '#' differentiating them	
+	 	con.printLine(name # " is " # age # " years old. They are from " # home # " and currently attending " # school # ".\n");
+	 	
+	 }
+}
