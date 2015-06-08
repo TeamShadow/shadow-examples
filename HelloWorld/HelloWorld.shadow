@@ -5,6 +5,8 @@ class HelloWorld
 {
     public main( String[] args ) => ()
     {
-        Console:instance.printLine("Hello, World!");
+    	Console con;
+    	
+        con.printLine("Hello, World!");
     }
 }

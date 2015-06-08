@@ -4,7 +4,7 @@ class Concatenation
 {
 	public main( String[] args ) => ()
 	{
-	 	Console con = Console:instance;
+	 	Console con;
 	 	
 	 	String count;
 	 	

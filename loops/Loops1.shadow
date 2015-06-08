@@ -4,14 +4,15 @@ class Loops1 {
 
     public main( String[] args ) => ()
     {
+    	Console con;
     	// print out all the agruments passed to this program
         foreach(var i in args) {
-        	Console:instance.printLine("Here's the args: " # i);
+        	con.printLine("Here's the args: " # i);
         }
         
 		int[,] multi = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
         foreach(int a in multi) {
-        	Console:instance.printLine("Here's the numbers: " # i);
+        	con.printLine("Here's the numbers: " # i);
     	}
     }
 }
