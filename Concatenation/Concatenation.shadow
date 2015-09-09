@@ -1,0 +1,16 @@
+import shadow:io@Console;
+
+class Concatenation
+{
+	public main( String[] args ) => ()
+	{
+	 	Console con;
+	 	
+	 	String count;
+	 	
+	 	count = "One, " # 2 # ", Three, " # 2 + 2 # ", Five, " # 1 + 5 # ", Seven, " # 6 + 2 # ", Nine, " # 7 + 3;
+	 	
+	 	con.printLine("\nLet's count from 1 to " # 4 + 6 # "!\n");
+	 	con.printLine(count # "\n" );
+	}
+}

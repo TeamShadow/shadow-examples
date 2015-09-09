@@ -4,7 +4,7 @@ class MultipleReturns
 {
 	public main( String[] args ) => ()
 	{
-	 	Console con = Console:instance;
+	 	Console con;
 	 	
 	 	String temp, evenOdd;
 	 	int num, squared, half, doubled, factorial;

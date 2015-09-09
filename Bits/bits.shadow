@@ -1,0 +1,63 @@
+import shadow:io@Console;
+
+class bits
+{
+    public main( String[] args ) => ()
+    {
+    	String temp;
+    	Console con;
+    	
+    	con.print("\nEnter an Integer: ");
+       	(temp, ) = con.readLine();
+       	con.printLine();
+       	int num = temp.toInt();
+       	
+       	con.print("Do you want to set, unset, or flip a bit? (s, u, f): ");
+       	(temp, ) = con.readLine();
+       	con.printLine();
+       	code choice = temp->codes[0];
+       	
+       	con.print("Which bit? (0-31): ");
+       	(temp, ) = con.readLine();
+       	con.printLine();
+       	int bit = temp.toInt();
+       	
+       	if(choice == 's')
+       		bitset(num, bit);
+       	
+       	else if(choice == 'u')
+       		unset(num, bit);
+       		
+       	else if(choice == 'f')
+       		flip(num, bit);
+    }
+    
+    public bitset(int num, int bit) => ()
+    {
+    	Console con;
+    	
+    	int temp = 1 << bit;
+    	int new = temp | value;
+    	con.printLine("The result of setting bit " # bit # " in " # num # " is " # new # ".\n");
+    	
+    }
+    
+    public unset(int num, int bit) => ()
+    {
+    	Console con;
+    	
+    	int temp = 1 << bit;
+    	temp = ~temp;
+    	int new = temp & value;
+    	con.printLine("The result of unsetting bit " # bit # " in " # num # " is " # new # ".\n");
+    }
+    
+    public flip(int num, int bit) => ()
+    {
+    	Console con;
+    	
+    	int temp = 1 << bit;
+    	int new = temp ^ value;
+    	con.printLine("The result of unsetting bit " # bit # " in " # num # " is " # new # ".\n");
+    }
+}

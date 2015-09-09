@@ -4,7 +4,7 @@ class InputOutput
 {
 	public main( String[] args ) => ()
 	 {
-	 	Console con = Console:instance;
+	 	Console con;
 	 	
 	 	String name, school, home, temp;
 	 	int age;
