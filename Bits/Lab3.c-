@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+/**
+ * Function: 	readInt
+ * Returns: 	an int, read from standard input. 
+ **/
+int readInt()
+{
+	int c = 0;
+	int i = 0;
+  
+	while( (c = getchar()) != EOF && c != '\n' )
+	{
+		if( c >= '0' && c <= '9')	
+			i = i * 10 + (c - '0');	
+	}
+
+	return i;
+}
+
+// main function
+int main()
+{
+	int value = 0;
+	char choice;
+	int bit = 0;
+	int new = 0;
+	int temp = 0;
+
+	printf("Enter an integer: ");
+	value = readInt();
+	printf("Do you want to set, unset, or flip a bit? (s, u, f): ");
+ 	choice = getchar();
+	getchar();
+	printf("Which bit? (0-31): ");
+	bit = readInt();
+
+	if(choice == 's')
+		{
+			temp = 1 << bit;
+			new = temp | value;
+			printf("The result of setting bit %d in %d is %d\n", bit, value, new);
+		}
+	else if(choice == 'u')
+		{
+			temp = 1 << bit;
+			temp = ~temp;
+			new = temp & value;
+			printf("The result of unsetting bit %d in %d is %d\n", bit, value, new);
+		}
+		else if(choice == 'f')
+		{
+			temp = 1 << bit;
+			new = temp ^ value;
+			printf("The result of flipping bit %d in %d is %d\n", bit, value, new);
+		}
+	
+	return 0;
+}
