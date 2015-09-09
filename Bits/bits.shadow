@@ -5,7 +5,7 @@ class bits
     public main( String[] args ) => ()
     {
     	String temp;
-    	Console con = Console:instance;
+    	Console con;
     	
     	con.print("\nEnter an Integer: ");
        	(temp, ) = con.readLine();
@@ -34,7 +34,7 @@ class bits
     
     public bitset(int num, int bit) => ()
     {
-    	Console con = Console:instance;
+    	Console con;
     	
     	int temp = 1 << bit;
     	int new = temp | value;
@@ -44,7 +44,7 @@ class bits
     
     public unset(int num, int bit) => ()
     {
-    	Console con = Console:instance;
+    	Console con;
     	
     	int temp = 1 << bit;
     	temp = ~temp;
@@ -54,7 +54,7 @@ class bits
     
     public flip(int num, int bit) => ()
     {
-    	Console con = Console:instance;
+    	Console con;
     	
     	int temp = 1 << bit;
     	int new = temp ^ value;
