@@ -4,33 +4,32 @@ class InputOutput
 {
 	public main( String[] args ) => ()
 	 {
-	 	Console con = Console:instance;
+	 	Console io = Console:instance;
 	 	
 	 	String name, school, home, temp;
 	 	int age;
 	 	
-	 //prompt the user for basic information	
-	 	con.print("\nWhat's your name? ");
-	 	(name, ) = con.readLine();
-	 	con.printLine();
+	 	//Prompt the user for basic information	
+	 	io.print("What's your name? ");
+	 	(name, ) = io.readLine();
+	 	io.printLine();
 	 	
-	 	con.print("How old are you? ");
-	 	(temp, ) = con.readLine();
+	 	io.print("How old are you? ");
+	 	(temp, ) = io.readLine();
 	 
-	 //convert string to int to get the age	
+	 	//Convert string to int to get the age	
 	 	age = temp.toInt();
-	 	con.printLine();
+	 	io.printLine();
 	 	
-	 	con.print("Where are you from? ");
-	 	(home, ) = con.readLine();
-	 	con.printLine();
+	 	io.print("Where are you from? ");
+	 	(home, ) = io.readLine();
+	 	io.printLine();
 	 	
-	 	con.print("What school do you attend? ");
-	 	(school, ) = con.readLine();
-	 	con.printLine();
+	 	io.print("What school do you attend? ");
+	 	(school, ) = io.readLine();
+	 	io.printLine();
 	 	
-	 //print out their info, variable are added with a '#' differentiating them	
-	 	con.printLine(name # " is " # age # " years old. They are from " # home # " and currently attending " # school # ".\n");
-	 	
+	 	//Print out their info, concatenating values with a #	
+	 	io.printLine(name # " is " # age # " years old. They are from " # home # " and currently attending " # school # ".");
 	 }
 }
